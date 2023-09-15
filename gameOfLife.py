@@ -38,8 +38,7 @@ def valid_neighbour(grid, row, column, head_cell_row, head_cell_column) -> bool:
     if not in_grid(row, column):
         return False
 
-    if (row, column) == (head_cell_row, head_cell_column):
-        return False
+    return (row, column) != (head_cell_row, head_cell_column)
 
     return grid[row][column] != EMPTY_CELL
 
